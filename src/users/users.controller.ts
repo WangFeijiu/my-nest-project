@@ -11,7 +11,7 @@ export class UsersController {
   async createUser(@Body() body: { name: string; email: string }) {
     return this.usersService.createUser(body.name, body.email);
   }
-
+  // https://randomuser.me/api/?results=10&inc=name,gender,email,nat,picture&noinfo
   @Get()
   async getUsers() {
     return this.usersService.getAllUsers();
